@@ -8,7 +8,6 @@ namespace Anagram
         {
             //How to check if two Strings are anagrams of each other? (Example: "Listen" and "Silent")
 
-
             //Console.WriteLine ("Enter first string:");
             //string str1 = Console.ReadLine();
             //Console.WriteLine ("Enter second string:");
@@ -32,9 +31,6 @@ namespace Anagram
             //    Console.WriteLine("The two strings are not anagrams.");
             //}
 
-            //Console.ReadLine();
-
-
             // How to reverse String in C# using Iteration and Recursion?
 
             //string word = "Hello";
@@ -51,34 +47,48 @@ namespace Anagram
             //Console.WriteLine("The count of this words are: " + result);  // Output: 6
 
             // Palindrome
-            string[] array =
-            {
-                "civic",
-                "deleveled",
-                "Hannah",
-                "kayak",
-                "level",
-                "examiron",
-                "racecar",
-                "radar",
-                "refer",
-                "reviver",
-                "easywcf",
-                "rotator",
-                "rotor",
-                "sagas",
-                "solos",
-                "stats",
-                "tenet",
-                "Csharpstar",
-                ""
-            };
-            foreach (string word in array)
-            {
-                bool isPalin = IsPalindrome(word);
-                Console.WriteLine("The word " + word + " is palindrome? " + isPalin); 
-            }
 
+            //string[] array =
+            //{
+            //    "civic",
+            //    "deleveled",
+            //    "Hannah",
+            //    "kayak",
+            //    "level",
+            //    "examiron",
+            //    "racecar",
+            //    "radar",
+            //    "refer",
+            //    "reviver",
+            //    "easywcf",
+            //    "rotator",
+            //    "rotor",
+            //    "sagas",
+            //    "solos",
+            //    "stats",
+            //    "tenet",
+            //    "Csharpstar",
+            //    ""
+            //};
+            //foreach (string word in array)
+            //{
+            //    bool isPalin = IsPalindrome(word);
+            //    Console.WriteLine("The word " + word + " is palindrome? " + isPalin); 
+            //}
+
+
+            //How to remove duplicate characters from String ?
+            
+            //string value1 = RemoveDuplicateChars("Csharpstar");
+            //string value2 = RemoveDuplicateChars("Google");
+            //string value3 = RemoveDuplicateChars("Yahoo");
+            //string value4 = RemoveDuplicateChars("CNN");
+            //string value5 = RemoveDuplicateChars("Line1\nLine2\nLine3");
+            //Console.WriteLine(value1);
+            //Console.WriteLine(value2);
+            //Console.WriteLine(value3);
+            //Console.WriteLine(value4);
+            //Console.WriteLine(value5);
         }
 
 
@@ -103,6 +113,7 @@ namespace Anagram
             return result;
         }
 
+        // Palindrome
         public static bool IsPalindrome(string word)
         {
             int min = 0;
@@ -119,6 +130,24 @@ namespace Anagram
                     max--;
                 }
 
+        }
+
+
+        //How to remove duplicate characters from String ?
+        public static string RemoveDuplicateChars(string word)
+        {
+            string table = "";
+            string result = "";
+
+            foreach (char c in word)
+            {
+                if(table.IndexOf(c) == -1)
+                {
+                    table += c;
+                    result += c;
+                }
+            }
+            return result;
         }
 
     }
