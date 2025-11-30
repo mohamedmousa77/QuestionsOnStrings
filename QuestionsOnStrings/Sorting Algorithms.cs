@@ -6,6 +6,27 @@ namespace QuestionsOnStrings
 
         public static void ShellSort(int[] array)
         {
+            int Gap = 1;
+            while (Gap < array.Length / 3)
+            {
+                Gap = 3 * Gap + 1;
+            }
+            while (Gap >= 1)
+            {
+                for (int i = Gap; i < array.Length; i++) // 1
+                { 
+                    for( int j = i; j>= Gap && array[j] < array[j-Gap]; j -= Gap)
+                    {
+                        Swap (array, j, j - Gap);
+                    }
+                }
+
+                Gap /= 3;
+            }
+        }
+
+        public static void InsertionSort(int[] array)
+        {
             for (int partIndex = 1; partIndex < array.Length; partIndex++)
             {
                 int currentUnsorted = array[partIndex];
