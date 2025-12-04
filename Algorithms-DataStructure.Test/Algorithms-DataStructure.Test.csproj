@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\QuestionsOnStrings\QuestionsOnStrings.csproj" />
+    <ProjectReference Include="..\QuestionsOnStrings\Algorithms_DataStructure.Lib.csproj" />
   </ItemGroup>
 
 </Project>
